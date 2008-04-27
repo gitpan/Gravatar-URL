@@ -15,7 +15,7 @@ BEGIN {
                      gravatar_url
                     );
     
-    our $VERSION = '0.01';
+    our $VERSION = '1.00';
 }
 
 
@@ -74,12 +74,14 @@ The url to use if the user has no gravatar or has none that fits your rating req
 
     default => "http://upload.wikimedia.org/wikipedia/en/8/89/Alfred.jpg"
 
+Relative URLs will be relative to the base (ie. gravatar.com), not your web site.
+
 =head4 border
 
 Gravatars can be requested to have a 1 pixel colored border.  If you'd like that, pass in the color to border as a 3 or 6 digit hex string.
 
-    border => "FFFFFF",  # a black border, like my soul
-    border => "FFF",     # black, but in 3 digits
+    border => "000000",  # a black border, like my soul
+    border => "000",     # black, but in 3 digits
 
 =head4 base
 
@@ -146,7 +148,7 @@ Converts an C<$email> address into its Gravatar C<$id>.
 
 sub gravatar_id {
     my $email = shift;
-    return md5_hex($email);
+    return md5_hex(lc $email);
 }
 
 
@@ -157,7 +159,7 @@ Thanks to L<gravatar.com> for coming up with the whole idea and Ashley Pond V fr
 
 =head1 LICENSE
 
-Copyright 2007, Michael G Schwern <schwern@pobox.com>.
+Copyright 2007 - 2008, Michael G Schwern <schwern@pobox.com>.
 
 This program is free software; you can redistribute it and/or
 modify it under the same terms as Perl itself.
