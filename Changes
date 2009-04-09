@@ -1,3 +1,20 @@
+1.01  Thu Apr  9 13:11:32 PDT 2009
+    Protocol Updates
+    (The Gravatar protocol changed, so we're changing with it)
+    * Gravatar expanded the max size to 512.
+      [rt.cpan.org 41244] (CHISEL)
+    * Base URL changed to http://www.gravatar.com/avatar/
+    * Ratings are now lower cased.  Upper cased ratings still
+      accepted, but will be lower cased.
+    * Using new http://base/id?key=value style.
+    * The border key has been removed from the protocol,
+      so its use throws a deprecation warning.
+
+    New Features
+    * The short_keys flag uses short keys in the URL
+      ("s" instead of "size", for example).
+
+
 1.00  Sun Apr 27 14:12:24 PDT 2008
     Bug Fixes
     * Gravatar IDs are insensitive to the case of the email address.
