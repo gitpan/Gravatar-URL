@@ -1,5 +1,5 @@
 This file contains message digests of all files listed in MANIFEST,
-signed via the Module::Signature module, version 0.55.
+signed via the Module::Signature module, version 0.61.
 
 To verify the content in this distribution, first make sure you have
 Module::Signature installed, then type:
@@ -14,19 +14,22 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 da6f215441f5f4c2ef0f1ac5347aad253ff6c50f Build.PL
-SHA1 b3682d5f2e0318d0d3d23aac866f997c8ed37410 Changes
-SHA1 7758b0be320c022c1ce8ca12ac464354d371b1d3 MANIFEST
-SHA1 4299310ce303d6be6ffc9ab65ed04728f744e3ec META.yml
-SHA1 15653f61d2fa90771833e0c8b6a24dd45863c588 lib/Gravatar/URL.pm
-SHA1 218d731c6d9ccf14c33a3b3db3faff3f4c6a24b4 t/deprecated.t
+SHA1 57fcac9d7b6888138ff4dc8774afb60a7ccf1dd1 Build.PL
+SHA1 76ff0820d7e50e966cbaf111221c75fb0ce88e0a Changes
+SHA1 5e4f8a6316dceb7d6bc6c5b3c49ad6941a5ea6f4 MANIFEST
+SHA1 8e76a4d7da7ca9b32f67f3675bbd42d34a25cd37 MANIFEST.SKIP
+SHA1 26e8d176f1b88898994d4325f713f4e4675af21a META.yml
+SHA1 2588ede38e5ddd7060bcafae1086ed3ca134fab5 lib/Gravatar/URL.pm
+SHA1 19711694d10060b613ca024cd37dc5e45a8f4e15 lib/Unicornify/URL.pm
+SHA1 02f21c26f52380259046ea05ae9d560b8a5c5072 t/deprecated.t
 SHA1 0250d25f32bcfe6dafab0b3892f4575959ef6890 t/error.t
 SHA1 3b4f3259bb95a336b73ecd2c06bf96dd30637a0a t/id.t
-SHA1 a1daffcb9416394c540b324b21a022b2b61c8a3d t/url.t
+SHA1 7bdb7b0b2b440eaade3bb2a968c4919c7c2d4666 t/unicornify.t
+SHA1 b027b15e0b5c1257a59bc63ecb8b7c3336119c8f t/url.t
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.9 (Darwin)
+Version: GnuPG v2.0.13 (Darwin)
 
-iEYEARECAAYFAkneV5QACgkQWMohlhD1QydtfQCfcze4m56PfxlfLG+oTJQIZDXO
-pGIAnjb1uA8ETnr/EWGXnUWGanXjOOC/
-=9cBO
+iEYEARECAAYFAku1IKYACgkQWMohlhD1QyeB0wCgmpW3M4lZElbrcEbqQMMigm3u
+/ukAoMUYiK2LdlG3TaJZxhzBh1fuOp8C
+=WBcp
 -----END PGP SIGNATURE-----
