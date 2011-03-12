@@ -2,12 +2,30 @@
 
 use Test::More 'no_plan';
 
-BEGIN { use_ok 'Gravatar::URL'; }
+BEGIN { use_ok 'Gravatar::URL';
+        use_ok 'Libravatar::URL'; }
 
-{
+my %interfaces = (
+    libravatar => {
+        func => \&libravatar_url,
+        base => 'http://cdn.libravatar.org/avatar',
+        https_base => 'https://seccdn.libravatar.org/avatar',
+    },
+    gravatar => {
+        func => \&gravatar_url,
+        base => 'http://www.gravatar.com/avatar',
+        https_base => 'https://secure.gravatar.com/avatar',
+    },
+);
+
+for my $interface_name (keys %interfaces) {
+    my $interface = $interfaces{$interface_name};
+    my $base = $interface->{base};
+    my $https_base = $interface->{https_base};
+    my $func = $interface->{func};
+
     my $id = 'a60fc0828e808b9a6a9d50f1792240c8';
     my $email = 'whatever@wherever.whichever';
-    my $base = 'http://www.gravatar.com/avatar';
 
     my @tests = (
         [{ email => $email },
@@ -19,7 +37,26 @@ BEGIN { use_ok 'Gravatar::URL'; }
         ],
         
         [{ email => $email,
+           https => 1
+         },
+         "$https_base/$id",
+        ],
+
+        [{ email => $email,
+           https => 0
+         },
+         "$base/$id",
+        ],
+
+        [{ email => $email,
            base  => 'http://example.com/gravatar'
+         },
+         "http://example.com/gravatar/$id",
+        ],
+
+        [{ email => $email,
+           base  => 'http://example.com/gravatar',
+           https => 1
          },
          "http://example.com/gravatar/$id",
         ],
@@ -87,7 +124,7 @@ BEGIN { use_ok 'Gravatar::URL'; }
     );
 
     # Add tests for the special defaults.
-    for my $special ("identicon", "monsterid", "wavatar") {
+    for my $special ("identicon", "mm", "monsterid", "retro", "wavatar") {
         my $test = [{ default => $special,
                       email   => $email,
                     },
@@ -98,7 +135,6 @@ BEGIN { use_ok 'Gravatar::URL'; }
 
     for my $test (@tests) {
         my($args, $url) = @$test;
-        is gravatar_url( %$args ), $url, join ", ", keys %$args;
+        is &$func( %$args ), $url, join ", ", keys %$args;
     }
 }
-

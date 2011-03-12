@@ -7,7 +7,7 @@ use URI::Escape qw(uri_escape);
 use Digest::MD5 qw(md5_hex);
 use Carp;
 
-our $VERSION = '1.02';
+our $VERSION = '1.03';
 
 use parent 'Exporter';
 our @EXPORT = qw(
@@ -15,8 +15,8 @@ our @EXPORT = qw(
     gravatar_url
 );    
 
-my $Gravatar_Base = "http://www.gravatar.com/avatar/";
-
+my $Gravatar_Http_Base  = "http://www.gravatar.com/avatar/";
+my $Gravatar_Https_Base = "https://secure.gravatar.com/avatar/";
 
 =head1 NAME
 
@@ -85,9 +85,10 @@ The url to use if the user has no gravatar or has none that fits your rating req
 Relative URLs will be relative to the base (ie. gravatar.com), not your web site.
 
 Gravatar defines special values that you may use as a default to
-produce dynamic default images. These are "identicon", "monsterid" and
-"wavatar".  "404" will cause the URL to return an HTTP 404 "Not Found"
-error instead.  See L<http://en.gravatar.com/site/implement/url> for
+produce dynamic default images. These are "identicon", "monsterid",
+"wavatar" and "retro".  "404" will cause the URL to return an HTTP 404 "Not Found"
+error instead whereas "mm" will display the same "mystery man" image for all
+missing people.  See L<http://en.gravatar.com/site/implement/url> for
 more info.
 
 If omitted, Gravatar will serve up their default image, the blue G.
@@ -107,7 +108,8 @@ like that, pass in the color to border as a 3 or 6 digit hex string.
 
 This is the URL of the location of the Gravatar server you wish to
 grab Gravatars from.  Defaults to
-L<http://www.gravatar.com/avatar/">.
+L<http://www.gravatar.com/avatar/"> for HTTP and
+L<https://secure.gravatar.com/avatar/> for HTTPS.
 
 =head4 short_keys
 
@@ -116,11 +118,22 @@ of "size", "r" instead of "ratings" and so on.
 
 short_keys defaults to true.
 
+=head4 https
+
+If true, serve avatars over HTTPS instead of HTTP.
+
+You should select this option if your site is served over HTTPS to
+avoid browser warnings about the presence of insecure content.
+
+https defaults to false.
+
 =cut
 
 my %defaults = (
     short_keys  => 1,
-    base        => $Gravatar_Base
+    base_http   => $Gravatar_Http_Base,
+    base_https  => $Gravatar_Https_Base,
+    https       => 0,
 );
 
 sub gravatar_url {
@@ -179,8 +192,13 @@ sub _apply_defaults {
     my($hash, $defaults) = @_;
 
     for my $key (keys %$defaults) {
+        next if 'base_http' eq $key or 'base_https' eq $key;
         next if exists $hash->{$key};
         $hash->{$key} = $defaults->{$key};
+    }
+
+    if (not exists $hash->{'base'}) {
+        $hash->{'base'} = $hash->{'https'} ? $defaults->{base_https} : $defaults->{base_http};
     }
 
     return;
@@ -210,11 +228,12 @@ original code.
 =head1 LICENSE
 
 Copyright 2007 - 2009, Michael G Schwern <schwern@pobox.com>.
+Copyright 2011, Francois Marier <fmarier@gmail.com>.
 
 This program is free software; you can redistribute it and/or
 modify it under the same terms as Perl itself.
 
-See F<http://www.perl.com/perl/misc/Artistic.html>
+See F<http://dev.perl.org/licenses/artistic.html>
 
 
 =head1 SEE ALSO

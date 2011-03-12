@@ -1,4 +1,5 @@
-#!start included /usr/local/lib/perl5/5.10.1/ExtUtils/MANIFEST.SKIP
+
+#!start included /Users/schwern/perl5/perlbrew/perls/perl-v5.12.2/lib/5.12.2/ExtUtils/MANIFEST.SKIP
 # Avoid version control files.
 \bRCS\b
 \bCVS\b
@@ -54,5 +55,6 @@
  
 # Avoid MYMETA files
 ^MYMETA\.
-#!end included /usr/local/lib/perl5/5.10.1/ExtUtils/MANIFEST.SKIP
+#!end included /Users/schwern/perl5/perlbrew/perls/perl-v5.12.2/lib/5.12.2/ExtUtils/MANIFEST.SKIP
+
 
