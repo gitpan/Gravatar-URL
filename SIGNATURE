@@ -1,0 +1,47 @@
+This file contains message digests of all files listed in MANIFEST,
+signed via the Module::Signature module, version 0.66.
+
+To verify the content in this distribution, first make sure you have
+Module::Signature installed, then type:
+
+    % cpansign -v
+
+It will check each file's integrity, as well as the signature's
+validity.  If "==> Signature verified OK! <==" is not displayed,
+the distribution may already have been compromised, and you should
+not run its Makefile.PL or Build.PL.
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+SHA1 7167d0e20bd720b44dd6537748b258de132d4931 Build.PL
+SHA1 6a25663ad17eae0e367ec4679d64ca9a15a68190 Changes
+SHA1 18bb6448d08c7658c6991171dbee9b761cf72e8d MANIFEST
+SHA1 8ca6e2e38708e91e4bd249dc854520a142c3cafe MANIFEST.SKIP
+SHA1 3f588ec2c21f33603265575474a91643b7454750 META.yml
+SHA1 ea9ce95f0027d1356cfecc9ade1f899f5d05b5a4 lib/Gravatar/URL.pm
+SHA1 f2f931bf78a6b63ed2646f80d68477944a7f93c3 lib/Libravatar/URL.pm
+SHA1 c61a9a12a298c2b9300fb5af99a3b38b2abe5b98 lib/Unicornify/URL.pm
+SHA1 02f21c26f52380259046ea05ae9d560b8a5c5072 t/deprecated.t
+SHA1 0250d25f32bcfe6dafab0b3892f4575959ef6890 t/error.t
+SHA1 3b4f3259bb95a336b73ecd2c06bf96dd30637a0a t/id.t
+SHA1 33e83ab4d46c39e69472167a55ed5bc920a5d2c7 t/libravatar.t
+SHA1 7bdb7b0b2b440eaade3bb2a968c4919c7c2d4666 t/unicornify.t
+SHA1 1b8f6257f03be54ba3e0d39973b3ff0113785afa t/url.t
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.11 (GNU/Linux)
+
+iQIcBAEBCAAGBQJNkWXjAAoJEBYoHy4AfJjRsjoQALAMi12O5P4XYM89vs89bK7r
+lBvaPPZgWqdPN//BaHrycdJyCyutH427NUhO/pgK2mWcdlRv81gcPmnaUrzxxRNr
+2GYPpbf5L90U2C8O3kaggU3Si1R+y1mQutlFgDCtOZrc+9IHD4c8SCT8n/6PqEVr
+2iKgKIPajY9QT3orjlo/DfrJn2gVj46p0HCphuduF+GHf1YEsCkFTwBkON+Je/Lc
+I4m/YMwuV1CZCN68F1Iu0+E2HbJrfqDU24ouj9sQzf7ZwffQX46ufjXpPFNU+tIE
+HM2xKvd2BNx4EQOXQoGsKb/L/gKuHAr+sokJ1xEQzSMvdf6gvEB2Wzo9DBYZQVDC
+HoJDLHvcdy6lZyss7QQVv9va6c3T0AxUP7FAYnt+Cy5QiGPEwy7PkvLAsIimxyZW
+XGfkzeT/Nl9Zz7cWmJxmFltYgsIsFbrUMlpe8wjTq0FNszwELJQcUm1eGtUQKqVp
+xpRSTa28uvx5liwQwHGdGaraYgo8+aynF0TxUKgd0cNrunlHonaNmvrFq9gelSAX
+Nzds2gUywit/luKCOuWg0IS8quofMYBvGByHQwo+geqHSNzanWi3lApyqgi9bgIt
+CAzZPjRb6OLZJvvIpWLZ5LB+ib5VNBcdAI1mbMfjIxIAG7QEE8iJCSqrhCl3v2An
+vFOVcb3OpUjkpMi1AvF7
+=YMWU
+-----END PGP SIGNATURE-----

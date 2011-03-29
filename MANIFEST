@@ -12,3 +12,4 @@ t/id.t
 t/libravatar.t
 t/unicornify.t
 t/url.t
+SIGNATURE    Added here by Module::Build
