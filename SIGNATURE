@@ -1,5 +1,5 @@
 This file contains message digests of all files listed in MANIFEST,
-signed via the Module::Signature module, version 0.66.
+signed via the Module::Signature module, version 0.68.
 
 To verify the content in this distribution, first make sure you have
 Module::Signature installed, then type:
@@ -15,33 +15,33 @@ not run its Makefile.PL or Build.PL.
 Hash: SHA256
 
 SHA1 7167d0e20bd720b44dd6537748b258de132d4931 Build.PL
-SHA1 6a25663ad17eae0e367ec4679d64ca9a15a68190 Changes
+SHA1 0502a2e8c361179910ff3392944d933f7a979b23 Changes
 SHA1 18bb6448d08c7658c6991171dbee9b761cf72e8d MANIFEST
 SHA1 8ca6e2e38708e91e4bd249dc854520a142c3cafe MANIFEST.SKIP
-SHA1 3f588ec2c21f33603265575474a91643b7454750 META.yml
-SHA1 ea9ce95f0027d1356cfecc9ade1f899f5d05b5a4 lib/Gravatar/URL.pm
-SHA1 f2f931bf78a6b63ed2646f80d68477944a7f93c3 lib/Libravatar/URL.pm
-SHA1 c61a9a12a298c2b9300fb5af99a3b38b2abe5b98 lib/Unicornify/URL.pm
+SHA1 26950201abf7203cf20e9c552cc18ffdf0bf01d1 META.yml
+SHA1 a7b7bd01200e13a6745ffb939bc332e3a0592268 lib/Gravatar/URL.pm
+SHA1 2ce4d71a777ff5d809598005f238c5fc401a1647 lib/Libravatar/URL.pm
+SHA1 ee00760fb95aec563a4da0fd6ac247fa90f5920f lib/Unicornify/URL.pm
 SHA1 02f21c26f52380259046ea05ae9d560b8a5c5072 t/deprecated.t
 SHA1 0250d25f32bcfe6dafab0b3892f4575959ef6890 t/error.t
 SHA1 3b4f3259bb95a336b73ecd2c06bf96dd30637a0a t/id.t
-SHA1 33e83ab4d46c39e69472167a55ed5bc920a5d2c7 t/libravatar.t
+SHA1 c1f9d8c33601bda1bc92ca23c1904e62efb36ed2 t/libravatar.t
 SHA1 7bdb7b0b2b440eaade3bb2a968c4919c7c2d4666 t/unicornify.t
 SHA1 1b8f6257f03be54ba3e0d39973b3ff0113785afa t/url.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.11 (GNU/Linux)
 
-iQIcBAEBCAAGBQJNkWXjAAoJEBYoHy4AfJjRsjoQALAMi12O5P4XYM89vs89bK7r
-lBvaPPZgWqdPN//BaHrycdJyCyutH427NUhO/pgK2mWcdlRv81gcPmnaUrzxxRNr
-2GYPpbf5L90U2C8O3kaggU3Si1R+y1mQutlFgDCtOZrc+9IHD4c8SCT8n/6PqEVr
-2iKgKIPajY9QT3orjlo/DfrJn2gVj46p0HCphuduF+GHf1YEsCkFTwBkON+Je/Lc
-I4m/YMwuV1CZCN68F1Iu0+E2HbJrfqDU24ouj9sQzf7ZwffQX46ufjXpPFNU+tIE
-HM2xKvd2BNx4EQOXQoGsKb/L/gKuHAr+sokJ1xEQzSMvdf6gvEB2Wzo9DBYZQVDC
-HoJDLHvcdy6lZyss7QQVv9va6c3T0AxUP7FAYnt+Cy5QiGPEwy7PkvLAsIimxyZW
-XGfkzeT/Nl9Zz7cWmJxmFltYgsIsFbrUMlpe8wjTq0FNszwELJQcUm1eGtUQKqVp
-xpRSTa28uvx5liwQwHGdGaraYgo8+aynF0TxUKgd0cNrunlHonaNmvrFq9gelSAX
-Nzds2gUywit/luKCOuWg0IS8quofMYBvGByHQwo+geqHSNzanWi3lApyqgi9bgIt
-CAzZPjRb6OLZJvvIpWLZ5LB+ib5VNBcdAI1mbMfjIxIAG7QEE8iJCSqrhCl3v2An
-vFOVcb3OpUjkpMi1AvF7
-=YMWU
+iQIcBAEBCAAGBQJOFD1lAAoJEBYoHy4AfJjRkMgQAKUxU7He/MhwnVnJcKcGmgue
+p8+5QV+1FNktZyRKsjWlQt2ChZ59nyRr7pnV9WVg0ZODcWTNXQYvG40YcaDcXPaC
+GQ41hlbQYusoioY+2YnQckLhP7FPwCrpsTl/IHwW1wg+lj/U4Eb0xLQYQcAVH7Wq
+LFGM/2Gnx1k/y66rlZT292gwSYsP5YOCOQpzzxYzfZs90GRAIFDIljKRs9S5SOWe
+4naOKtMJO6knaMTNI+4zXDJUGUsflnUuJ4PE6KGnToIESlIGyxn9cV2rIkEY/ozL
+7KcNQB/Y+PrgIpZ9kfIv+NT2vR3jJk4CbSj6dUSenN8mtcfWbQ5b6g3SGbuCm9ei
+sdisMmp6eoopdpFtidiItqD3tvibY+a5GMN+pYSvQLEFJUUuHUHwxL/BfAyE9ODk
+mYFXwtzUBN1t4CbSNXDxZ8IZpRWZJerMj+6RX+mgU5N1EKgVj/aXIILxV6gzTvWg
+q09xQDU9ZaN1QDlZ/UGxxCCe29Pqe8R23CGTAGIZwU//uPGxrDc7WR9hzfQMDq9U
+wHw4y0SBW2cYdf08ZjqlRvQN1bXOqRLT9sZOMsPtui3pUQaw2JmP+ob3dYXeytzL
+LavcfhQFoZ4XatdGQzu08UNKc/s2oi4per5ZFi3xWNjBtdJfJFOLDar/e3CpPsem
+4mUio8/ztrDII4m0ao/t
+=r7yG
 -----END PGP SIGNATURE-----
